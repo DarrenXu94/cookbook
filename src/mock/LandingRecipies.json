@@ -1,6 +1,9 @@
 [
     {
         "name": "Yummy",
-        "id": 0
+        "id": 0,
+        "cookingTime": 15,
+        "rating": 3,
+        "cost": 15.50
     }
 ]

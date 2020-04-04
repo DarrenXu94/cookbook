@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div v-for="item in LandingRecipies" :key="item.id">
-      <RecipieCard :recipie="item" />
+    <div class="card_container layout" v-for="item in LandingRecipies" :key="item.id">
+      <RecipieCard class="layout-item-50 layout-item-small-100" :recipie="item" />
     </div>
   </div>
 </template>
@@ -25,4 +25,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.card_container {
+  margin: 0 1rem;
+}
 </style>

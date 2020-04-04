@@ -1,0 +1,701 @@
+.layout {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.layout-item-5 {
+    min-width: 5%;
+    max-width: 5%;
+    flex: 0 1 5%;
+}
+
+.layout-item-10 {
+    min-width: 10%;
+    max-width: 10%;
+    flex: 0 1 10%;
+}
+
+.layout-item-15 {
+    min-width: 15%;
+    max-width: 15%;
+    flex: 0 1 15%;
+}
+
+.layout-item-20 {
+    min-width: 20%;
+    max-width: 20%;
+    flex: 0 1 20%;
+}
+
+.layout-item-25 {
+    min-width: 25%;
+    max-width: 25%;
+    flex: 0 1 25%;
+}
+
+.layout-item-30 {
+    min-width: 30%;
+    max-width: 30%;
+    flex: 0 1 30%;
+}
+
+.layout-item-33 {
+    min-width: 33.3333%;
+    max-width: 33.3333%;
+    flex: 0 1 33.3333%;
+}
+
+.layout-item-35 {
+    min-width: 35%;
+    max-width: 35%;
+    flex: 0 1 35%;
+}
+
+.layout-item-40 {
+    min-width: 40%;
+    max-width: 40%;
+    flex: 0 1 40%;
+}
+
+.layout-item-45 {
+    min-width: 45%;
+    max-width: 45%;
+    flex: 0 1 45%;
+}
+
+.layout-item-50 {
+    min-width: 50%;
+    max-width: 50%;
+    flex: 0 1 50%;
+}
+
+.layout-item-55 {
+    min-width: 55%;
+    max-width: 55%;
+    flex: 0 1 55%;
+}
+
+.layout-item-60 {
+    min-width: 60%;
+    max-width: 60%;
+    flex: 0 1 60%;
+}
+
+.layout-item-65 {
+    min-width: 65%;
+    max-width: 65%;
+    flex: 0 1 65%;
+}
+
+.layout-item-66 {
+    min-width: 66.6666%;
+    max-width: 66.6666%;
+    flex: 0 1 66.6666%;
+}
+
+.layout-item-70 {
+    min-width: 70%;
+    max-width: 70%;
+    flex: 0 1 70%;
+}
+
+.layout-item-75 {
+    min-width: 75%;
+    max-width: 75%;
+    flex: 0 1 75%;
+}
+
+.layout-item-80 {
+    min-width: 80%;
+    max-width: 80%;
+    flex: 0 1 80%;
+}
+
+.layout-item-85 {
+    min-width: 85%;
+    max-width: 85%;
+    flex: 0 1 85%;
+}
+
+.layout-item-90 {
+    min-width: 90%;
+    max-width: 90%;
+    flex: 0 1 90%;
+}
+
+.layout-item-95 {
+    min-width: 95%;
+    max-width: 95%;
+    flex: 0 1 95%;
+}
+
+.layout-item-100 {
+    min-width: 100%;
+    max-width: 100%;
+    flex: 0 1 100%;
+}
+
+@media screen and (min-width: 1920px) {
+    .layout-item-xlarge-5 {
+        min-width: 5%;
+        max-width: 5%;
+        flex: 0 1 5%;
+    }
+    .layout-item-xlarge-10 {
+        min-width: 10%;
+        max-width: 10%;
+        flex: 0 1 10%;
+    }
+    .layout-item-xlarge-15 {
+        min-width: 15%;
+        max-width: 15%;
+        flex: 0 1 15%;
+    }
+    .layout-item-xlarge-20 {
+        min-width: 20%;
+        max-width: 20%;
+        flex: 0 1 20%;
+    }
+    .layout-item-xlarge-25 {
+        min-width: 25%;
+        max-width: 25%;
+        flex: 0 1 25%;
+    }
+    .layout-item-xlarge-30 {
+        min-width: 30%;
+        max-width: 30%;
+        flex: 0 1 30%;
+    }
+    .layout-item-xlarge-33 {
+        min-width: 33.3333%;
+        max-width: 33.3333%;
+        flex: 0 1 33.3333%;
+    }
+    .layout-item-xlarge-35 {
+        min-width: 35%;
+        max-width: 35%;
+        flex: 0 1 35%;
+    }
+    .layout-item-xlarge-40 {
+        min-width: 40%;
+        max-width: 40%;
+        flex: 0 1 40%;
+    }
+    .layout-item-xlarge-45 {
+        min-width: 45%;
+        max-width: 45%;
+        flex: 0 1 45%;
+    }
+    .layout-item-xlarge-50 {
+        min-width: 50%;
+        max-width: 50%;
+        flex: 0 1 50%;
+    }
+    .layout-item-xlarge-55 {
+        min-width: 55%;
+        max-width: 55%;
+        flex: 0 1 55%;
+    }
+    .layout-item-xlarge-60 {
+        min-width: 60%;
+        max-width: 60%;
+        flex: 0 1 60%;
+    }
+    .layout-item-xlarge-65 {
+        min-width: 65%;
+        max-width: 65%;
+        flex: 0 1 65%;
+    }
+    .layout-item-xlarge-66 {
+        min-width: 66.6666%;
+        max-width: 66.6666%;
+        flex: 0 1 66.6666%;
+    }
+    .layout-item-xlarge-70 {
+        min-width: 70%;
+        max-width: 70%;
+        flex: 0 1 70%;
+    }
+    .layout-item-xlarge-75 {
+        min-width: 75%;
+        max-width: 75%;
+        flex: 0 1 75%;
+    }
+    .layout-item-xlarge-80 {
+        min-width: 80%;
+        max-width: 80%;
+        flex: 0 1 80%;
+    }
+    .layout-item-xlarge-85 {
+        min-width: 85%;
+        max-width: 85%;
+        flex: 0 1 85%;
+    }
+    .layout-item-xlarge-90 {
+        min-width: 90%;
+        max-width: 90%;
+        flex: 0 1 90%;
+    }
+    .layout-item-xlarge-95 {
+        min-width: 95%;
+        max-width: 95%;
+        flex: 0 1 95%;
+    }
+    .layout-item-xlarge-100 {
+        min-width: 100%;
+        max-width: 100%;
+        flex: 0 1 100%;
+    }
+}
+
+@media screen and (max-width: 1919px) {
+    .layout-item-large-5 {
+        min-width: 5%;
+        max-width: 5%;
+        flex: 0 1 5%;
+    }
+    .layout-item-large-10 {
+        min-width: 10%;
+        max-width: 10%;
+        flex: 0 1 10%;
+    }
+    .layout-item-large-15 {
+        min-width: 15%;
+        max-width: 15%;
+        flex: 0 1 15%;
+    }
+    .layout-item-large-20 {
+        min-width: 20%;
+        max-width: 20%;
+        flex: 0 1 20%;
+    }
+    .layout-item-large-25 {
+        min-width: 25%;
+        max-width: 25%;
+        flex: 0 1 25%;
+    }
+    .layout-item-large-30 {
+        min-width: 30%;
+        max-width: 30%;
+        flex: 0 1 30%;
+    }
+    .layout-item-large-33 {
+        min-width: 33.3333%;
+        max-width: 33.3333%;
+        flex: 0 1 33.3333%;
+    }
+    .layout-item-large-35 {
+        min-width: 35%;
+        max-width: 35%;
+        flex: 0 1 35%;
+    }
+    .layout-item-large-40 {
+        min-width: 40%;
+        max-width: 40%;
+        flex: 0 1 40%;
+    }
+    .layout-item-large-45 {
+        min-width: 45%;
+        max-width: 45%;
+        flex: 0 1 45%;
+    }
+    .layout-item-large-50 {
+        min-width: 50%;
+        max-width: 50%;
+        flex: 0 1 50%;
+    }
+    .layout-item-large-55 {
+        min-width: 55%;
+        max-width: 55%;
+        flex: 0 1 55%;
+    }
+    .layout-item-large-60 {
+        min-width: 60%;
+        max-width: 60%;
+        flex: 0 1 60%;
+    }
+    .layout-item-large-65 {
+        min-width: 65%;
+        max-width: 65%;
+        flex: 0 1 65%;
+    }
+    .layout-item-large-66 {
+        min-width: 66.6666%;
+        max-width: 66.6666%;
+        flex: 0 1 66.6666%;
+    }
+    .layout-item-large-70 {
+        min-width: 70%;
+        max-width: 70%;
+        flex: 0 1 70%;
+    }
+    .layout-item-large-75 {
+        min-width: 75%;
+        max-width: 75%;
+        flex: 0 1 75%;
+    }
+    .layout-item-large-80 {
+        min-width: 80%;
+        max-width: 80%;
+        flex: 0 1 80%;
+    }
+    .layout-item-large-85 {
+        min-width: 85%;
+        max-width: 85%;
+        flex: 0 1 85%;
+    }
+    .layout-item-large-90 {
+        min-width: 90%;
+        max-width: 90%;
+        flex: 0 1 90%;
+    }
+    .layout-item-large-95 {
+        min-width: 95%;
+        max-width: 95%;
+        flex: 0 1 95%;
+    }
+    .layout-item-large-100 {
+        min-width: 100%;
+        max-width: 100%;
+        flex: 0 1 100%;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .layout-item-medium-5 {
+        min-width: 5%;
+        max-width: 5%;
+        flex: 0 1 5%;
+    }
+    .layout-item-medium-10 {
+        min-width: 10%;
+        max-width: 10%;
+        flex: 0 1 10%;
+    }
+    .layout-item-medium-15 {
+        min-width: 15%;
+        max-width: 15%;
+        flex: 0 1 15%;
+    }
+    .layout-item-medium-20 {
+        min-width: 20%;
+        max-width: 20%;
+        flex: 0 1 20%;
+    }
+    .layout-item-medium-25 {
+        min-width: 25%;
+        max-width: 25%;
+        flex: 0 1 25%;
+    }
+    .layout-item-medium-30 {
+        min-width: 30%;
+        max-width: 30%;
+        flex: 0 1 30%;
+    }
+    .layout-item-medium-33 {
+        min-width: 33.3333%;
+        max-width: 33.3333%;
+        flex: 0 1 33.3333%;
+    }
+    .layout-item-medium-35 {
+        min-width: 35%;
+        max-width: 35%;
+        flex: 0 1 35%;
+    }
+    .layout-item-medium-40 {
+        min-width: 40%;
+        max-width: 40%;
+        flex: 0 1 40%;
+    }
+    .layout-item-medium-45 {
+        min-width: 45%;
+        max-width: 45%;
+        flex: 0 1 45%;
+    }
+    .layout-item-medium-50 {
+        min-width: 50%;
+        max-width: 50%;
+        flex: 0 1 50%;
+    }
+    .layout-item-medium-55 {
+        min-width: 55%;
+        max-width: 55%;
+        flex: 0 1 55%;
+    }
+    .layout-item-medium-60 {
+        min-width: 60%;
+        max-width: 60%;
+        flex: 0 1 60%;
+    }
+    .layout-item-medium-65 {
+        min-width: 65%;
+        max-width: 65%;
+        flex: 0 1 65%;
+    }
+    .layout-item-medium-66 {
+        min-width: 66.6666%;
+        max-width: 66.6666%;
+        flex: 0 1 66.6666%;
+    }
+    .layout-item-medium-70 {
+        min-width: 70%;
+        max-width: 70%;
+        flex: 0 1 70%;
+    }
+    .layout-item-medium-75 {
+        min-width: 75%;
+        max-width: 75%;
+        flex: 0 1 75%;
+    }
+    .layout-item-medium-80 {
+        min-width: 80%;
+        max-width: 80%;
+        flex: 0 1 80%;
+    }
+    .layout-item-medium-85 {
+        min-width: 85%;
+        max-width: 85%;
+        flex: 0 1 85%;
+    }
+    .layout-item-medium-90 {
+        min-width: 90%;
+        max-width: 90%;
+        flex: 0 1 90%;
+    }
+    .layout-item-medium-95 {
+        min-width: 95%;
+        max-width: 95%;
+        flex: 0 1 95%;
+    }
+    .layout-item-medium-100 {
+        min-width: 100%;
+        max-width: 100%;
+        flex: 0 1 100%;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .layout-item-small-5 {
+        min-width: 5%;
+        max-width: 5%;
+        flex: 0 1 5%;
+    }
+    .layout-item-small-10 {
+        min-width: 10%;
+        max-width: 10%;
+        flex: 0 1 10%;
+    }
+    .layout-item-small-15 {
+        min-width: 15%;
+        max-width: 15%;
+        flex: 0 1 15%;
+    }
+    .layout-item-small-20 {
+        min-width: 20%;
+        max-width: 20%;
+        flex: 0 1 20%;
+    }
+    .layout-item-small-25 {
+        min-width: 25%;
+        max-width: 25%;
+        flex: 0 1 25%;
+    }
+    .layout-item-small-30 {
+        min-width: 30%;
+        max-width: 30%;
+        flex: 0 1 30%;
+    }
+    .layout-item-small-33 {
+        min-width: 33.3333%;
+        max-width: 33.3333%;
+        flex: 0 1 33.3333%;
+    }
+    .layout-item-small-35 {
+        min-width: 35%;
+        max-width: 35%;
+        flex: 0 1 35%;
+    }
+    .layout-item-small-40 {
+        min-width: 40%;
+        max-width: 40%;
+        flex: 0 1 40%;
+    }
+    .layout-item-small-45 {
+        min-width: 45%;
+        max-width: 45%;
+        flex: 0 1 45%;
+    }
+    .layout-item-small-50 {
+        min-width: 50%;
+        max-width: 50%;
+        flex: 0 1 50%;
+    }
+    .layout-item-small-55 {
+        min-width: 55%;
+        max-width: 55%;
+        flex: 0 1 55%;
+    }
+    .layout-item-small-60 {
+        min-width: 60%;
+        max-width: 60%;
+        flex: 0 1 60%;
+    }
+    .layout-item-small-65 {
+        min-width: 65%;
+        max-width: 65%;
+        flex: 0 1 65%;
+    }
+    .layout-item-small-66 {
+        min-width: 66.6666%;
+        max-width: 66.6666%;
+        flex: 0 1 66.6666%;
+    }
+    .layout-item-small-70 {
+        min-width: 70%;
+        max-width: 70%;
+        flex: 0 1 70%;
+    }
+    .layout-item-small-75 {
+        min-width: 75%;
+        max-width: 75%;
+        flex: 0 1 75%;
+    }
+    .layout-item-small-80 {
+        min-width: 80%;
+        max-width: 80%;
+        flex: 0 1 80%;
+    }
+    .layout-item-small-85 {
+        min-width: 85%;
+        max-width: 85%;
+        flex: 0 1 85%;
+    }
+    .layout-item-small-90 {
+        min-width: 90%;
+        max-width: 90%;
+        flex: 0 1 90%;
+    }
+    .layout-item-small-95 {
+        min-width: 95%;
+        max-width: 95%;
+        flex: 0 1 95%;
+    }
+    .layout-item-small-100 {
+        min-width: 100%;
+        max-width: 100%;
+        flex: 0 1 100%;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .layout-item-xsmall-5 {
+        min-width: 5%;
+        max-width: 5%;
+        flex: 0 1 5%;
+    }
+    .layout-item-xsmall-10 {
+        min-width: 10%;
+        max-width: 10%;
+        flex: 0 1 10%;
+    }
+    .layout-item-xsmall-15 {
+        min-width: 15%;
+        max-width: 15%;
+        flex: 0 1 15%;
+    }
+    .layout-item-xsmall-20 {
+        min-width: 20%;
+        max-width: 20%;
+        flex: 0 1 20%;
+    }
+    .layout-item-xsmall-25 {
+        min-width: 25%;
+        max-width: 25%;
+        flex: 0 1 25%;
+    }
+    .layout-item-xsmall-30 {
+        min-width: 30%;
+        max-width: 30%;
+        flex: 0 1 30%;
+    }
+    .layout-item-xsmall-33 {
+        min-width: 33.3333%;
+        max-width: 33.3333%;
+        flex: 0 1 33.3333%;
+    }
+    .layout-item-xsmall-35 {
+        min-width: 35%;
+        max-width: 35%;
+        flex: 0 1 35%;
+    }
+    .layout-item-xsmall-40 {
+        min-width: 40%;
+        max-width: 40%;
+        flex: 0 1 40%;
+    }
+    .layout-item-xsmall-45 {
+        min-width: 45%;
+        max-width: 45%;
+        flex: 0 1 45%;
+    }
+    .layout-item-xsmall-50 {
+        min-width: 50%;
+        max-width: 50%;
+        flex: 0 1 50%;
+    }
+    .layout-item-xsmall-55 {
+        min-width: 55%;
+        max-width: 55%;
+        flex: 0 1 55%;
+    }
+    .layout-item-xsmall-60 {
+        min-width: 60%;
+        max-width: 60%;
+        flex: 0 1 60%;
+    }
+    .layout-item-xsmall-65 {
+        min-width: 65%;
+        max-width: 65%;
+        flex: 0 1 65%;
+    }
+    .layout-item-xsmall-66 {
+        min-width: 66.6666%;
+        max-width: 66.6666%;
+        flex: 0 1 66.6666%;
+    }
+    .layout-item-xsmall-70 {
+        min-width: 70%;
+        max-width: 70%;
+        flex: 0 1 70%;
+    }
+    .layout-item-xsmall-75 {
+        min-width: 75%;
+        max-width: 75%;
+        flex: 0 1 75%;
+    }
+    .layout-item-xsmall-80 {
+        min-width: 80%;
+        max-width: 80%;
+        flex: 0 1 80%;
+    }
+    .layout-item-xsmall-85 {
+        min-width: 85%;
+        max-width: 85%;
+        flex: 0 1 85%;
+    }
+    .layout-item-xsmall-90 {
+        min-width: 90%;
+        max-width: 90%;
+        flex: 0 1 90%;
+    }
+    .layout-item-xsmall-95 {
+        min-width: 95%;
+        max-width: 95%;
+        flex: 0 1 95%;
+    }
+    .layout-item-xsmall-100 {
+        min-width: 100%;
+        max-width: 100%;
+        flex: 0 1 100%;
+    }
+}

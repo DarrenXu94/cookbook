@@ -21,6 +21,20 @@
         by
         <a href="#" class="card__author" title="author">Celeste Mills</a>
       </span>
+      <div class="card__details layout">
+        <div class="card__details__item card__details__time layout-item-33">
+          <div class="card__details__item__heading">Time</div>
+          <div class="card__details__item__value">{{recipie.cookingTime}} min</div>
+        </div>
+        <div class="card__details__item card__details__rating layout-item-33">
+          <div class="card__details__item__heading">Rating</div>
+          <div class="card__details__item__value">{{recipie.rating}}</div>
+        </div>
+        <div class="card__details__item card__details__cost layout-item-33">
+          <div class="card__details__item__heading">Cost</div>
+          <div class="card__details__item__value">${{recipie.cost}}</div>
+        </div>
+      </div>
     </div>
   </article>
 </template>
@@ -34,7 +48,9 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+@import "../../scss/variables.scss";
+
 * {
   box-sizing: border-box;
 }
@@ -51,10 +67,6 @@ export default {
 .card--1 .card__img,
 .card--1 .card__img--hover {
   background-image: url("https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
-}
-
-.card__like {
-  width: 18px;
 }
 
 .card__clock {
@@ -127,7 +139,7 @@ export default {
 }
 
 .card__category {
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 2px;
@@ -138,7 +150,7 @@ export default {
 .card__title {
   margin-top: 5px;
   margin-bottom: 10px;
-  font-family: "Roboto Slab", serif;
+  /* font-family: "Roboto Slab", serif; */
 }
 
 .card__by {
@@ -165,5 +177,23 @@ export default {
 
 .card:hover .card__info-hover {
   opacity: 1;
+}
+
+.card__details {
+  padding-top: 15px;
+  margin-top: 15px;
+  border-top: 1px solid $background;
+}
+
+.card__details__item {
+  text-align: center;
+}
+
+.card__details__item__heading {
+  padding-bottom: 5px;
+}
+
+.card__details__item__value {
+  font-size: 1.1rem;
 }
 </style>
