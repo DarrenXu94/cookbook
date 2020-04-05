@@ -1,6 +1,7 @@
 [
     {
         "name": "Yummy",
+        "author": "Daz",
         "id": 0,
         "cookingTime": 15,
         "rating": 3,

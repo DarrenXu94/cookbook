@@ -23,6 +23,7 @@
   -moz-osx-font-smoothing: grayscale;
   // text-align: center;
   color: #2c3e50;
+  height: 100vh;
 }
 
 body {
@@ -33,7 +34,7 @@ body {
 
 .nav {
   background: $navbar_background;
-  margin-bottom: 1rem;
+  height: 2.5rem;
 }
 
 .nav__title {
