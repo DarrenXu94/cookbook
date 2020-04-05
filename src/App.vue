@@ -6,7 +6,7 @@
     </div>-->
     <div class="nav">
       <div class="nav__title">
-        <router-link to="/">The Stockdale Cook</router-link>
+        <router-link to="/">The Cookbook</router-link>
       </div>
     </div>
     <router-view />
