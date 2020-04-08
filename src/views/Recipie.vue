@@ -166,7 +166,7 @@ section.recipie__directions {
 @media screen and (max-width: 959px) {
   .recipie {
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 3fr 0.5fr 3fr;
+    grid-template-rows: 1fr 0.3fr 3fr;
     grid-template-areas:
       "recipie_image recipie_image"
       "info_bar        info_bar"
@@ -179,12 +179,16 @@ section.recipie__directions {
     // display: flex;
     // flex-direction: column;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.25fr 1fr 1fr;
+    grid-template-rows: 5fr 0.5fr auto auto;
     grid-template-areas:
       "recipie_image"
       "info_bar"
       "ingredients"
       "directions";
+  }
+
+  section.recipie__info_bar {
+    padding: 5px;
   }
 }
 </style>
