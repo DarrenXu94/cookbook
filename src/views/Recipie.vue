@@ -10,7 +10,19 @@
       </section>
       <section class="recipie__info_item layout-item-33">
         <div class="recipie__info_item_heading">Rating</div>
-        <div class="recipie__info_item_value">3</div>
+        <div class="recipie__info_item_value">
+          <star-rating
+            class="center-stars"
+            v-model="rating"
+            :read-only="true"
+            :star-size="20"
+            :show-rating="false"
+            :border-width="4"
+            border-color="#d8d8d8"
+            :rounded-corners="true"
+            :star-points="[23,2, 14,17, 0,19, 10,34, 7,50, 23,43, 38,50, 36,34, 46,19, 31,17]"
+          ></star-rating>
+        </div>
       </section>
       <section class="recipie__info_item layout-item-33">
         <div class="recipie__info_item_heading">Cost</div>
@@ -74,7 +86,8 @@ Lemon wedges, for serving`,
 
 3. Using tongs, transfer spaghetti to pan with clam sauce, distributing pasta so it is mostly submerged in sauce. Cook, tossing and stirring occasionally, until pasta is cooked to your liking and sauce has thickened slightly, about 4 minutes. Taste for seasoning, and add salt if necessary.
 
-4. Turn off heat, add remaining butter and parsley, and toss and stir spaghetti vigorously to incorporate parsley and emulsify butter into sauce. Divide pasta among four serving plates, spooning sauce and clams evenly over each portion. Garnish with celery leaves, and serve immediately, passing lemon wedges, for squeezing, at the table.`
+4. Turn off heat, add remaining butter and parsley, and toss and stir spaghetti vigorously to incorporate parsley and emulsify butter into sauce. Divide pasta among four serving plates, spooning sauce and clams evenly over each portion. Garnish with celery leaves, and serve immediately, passing lemon wedges, for squeezing, at the table.`,
+      rating: 3
     };
   }
 };

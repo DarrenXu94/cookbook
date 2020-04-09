@@ -1,9 +1,46 @@
 <template>
   <div class="create">
     <div class="create__form">
-      <input type="text" v-model="title" placeholder="edit me" />
-      <textarea v-model="ingredients" placeholder="add multiple lines"></textarea>
-      <textarea v-model="directions" placeholder="add multiple lines"></textarea>
+      <label for="title">Title</label>
+      <input class="mb" id="title" type="text" v-model="title" placeholder="Title" />
+
+      <label for="author">Your name</label>
+      <input class="mb" id="author" type="text" v-model="author" placeholder="Your name" />
+
+      <label for="ingredients">Ingredients</label>
+      <textarea class="mb" id="ingredients" v-model="ingredients" placeholder="List ingredients"></textarea>
+
+      <label for="directions">Directions</label>
+      <textarea class="mb" id="directions" v-model="directions" placeholder="Explain directions"></textarea>
+
+      <label for="cost">Cost (dollars)</label>
+      <div class="input-container">
+        <div class="input-container-icon">
+          <i class="fa fa-usd icon"></i>
+        </div>
+        <input class="input-field" id="cost" v-model.number="cost" type="number" />
+      </div>
+
+      <label for="time">Time (minutes)</label>
+      <div class="input-container">
+        <div class="input-container-icon">
+          <i class="fa fa-clock-o icon"></i>
+        </div>
+        <input class="input-field" id="time" v-model.number="time" type="number" />
+      </div>
+
+      <label for="rating">Rating</label>
+      <star-rating
+        id="rating"
+        :star-size="25"
+        class="star-rating"
+        :border-width="4"
+        border-color="#d8d8d8"
+        :rounded-corners="true"
+        :star-points="[23,2, 14,17, 0,19, 10,34, 7,50, 23,43, 38,50, 36,34, 46,19, 31,17]"
+        :show-rating="false"
+        v-model="rating"
+      ></star-rating>
       <a href class="btn-secondary">Submit</a>
     </div>
   </div>
@@ -16,7 +53,11 @@ export default {
     return {
       title: "",
       ingredients: "",
-      directions: ""
+      directions: "",
+      rating: 1,
+      author: "",
+      cost: 0,
+      time: 0
     };
   }
 };
@@ -26,21 +67,16 @@ export default {
 .create {
   padding: 1rem;
   .create__form {
-    max-width: 500px;
+    max-width: 800px;
     padding: 10px 20px;
-    background: #f4f7f8;
+    background: #fff;
     margin: 10px auto;
-    padding: 20px;
-    background: #f4f7f8;
     border-radius: 8px;
   }
-  .create__form fieldset {
-    border: none;
+  .create__form textarea {
+    resize: vertical; /* user can resize vertically, but width is fixed */
   }
-  .create__form legend {
-    font-size: 1.4em;
-    margin-bottom: 10px;
-  }
+
   .create__form label {
     display: block;
     margin-bottom: 8px;
@@ -66,11 +102,13 @@ export default {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    background-color: #e8eeef;
+    background-color: #d8d7d8;
     color: #8a97a0;
     -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-    margin-bottom: 30px;
+    &.mb {
+      margin-bottom: 1rem;
+    }
   }
   .create__form input[type="text"]:focus,
   .create__form input[type="date"]:focus,
@@ -82,45 +120,43 @@ export default {
   .create__form input[type="url"]:focus,
   .create__form textarea:focus,
   .create__form select:focus {
-    background: #d2d9dd;
+    background: #e2e2e2;
   }
   .create__form select {
     -webkit-appearance: menulist-button;
     height: 35px;
   }
-  .create__form .number {
-    background: #1abc9c;
-    color: #fff;
-    height: 30px;
-    width: 30px;
-    display: inline-block;
-    font-size: 0.8em;
-    margin-right: 4px;
-    line-height: 30px;
-    text-align: center;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
-    border-radius: 15px 15px 15px 0px;
+
+  .create__form .star-rating {
+    margin-bottom: 30px;
+  }
+  .input-container {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
   }
 
-  .create__form input[type="submit"],
-  .create__form input[type="button"] {
-    position: relative;
-    display: block;
-    padding: 19px 39px 18px 39px;
-    color: #fff;
-    margin: 0 auto;
-    background: #1abc9c;
-    font-size: 18px;
+  .icon {
+    // padding: 10px;
+    // color: white;
+    min-width: 50px;
     text-align: center;
-    font-style: normal;
-    width: 100%;
-    border: 1px solid #16a085;
-    border-width: 1px 1px 3px;
-    margin-bottom: 10px;
   }
-  .create__form input[type="submit"]:hover,
-  .create__form input[type="button"]:hover {
-    background: #109177;
+
+  .input-container-icon {
+    display: flex;
+    align-items: center;
+    background: #d8d7d8;
+    border-radius: 4px 0px 0px 4px;
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+
+    border-radius: 0px 4px 4px 0px !important;
   }
 }
 </style>

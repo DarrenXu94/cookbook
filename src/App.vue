@@ -89,4 +89,9 @@ a {
   color: #fff;
   background-color: $navbar_background;
 }
+
+// Global classes
+.vue-star-rating.center-stars {
+  justify-content: center;
+}
 </style>
