@@ -41,12 +41,40 @@
         :show-rating="false"
         v-model="rating"
       ></star-rating>
+
+      <!-- File upload -->
+      <label for="image">Upload image</label>
+      <div class="dropbox">
+        <input
+          id="image"
+          type="file"
+          :name="uploadFieldName"
+          :disabled="isSaving"
+          @change="filesChange($event.target.name, $event.target.files)"
+          accept="image/*"
+          class="input-file"
+        />
+        <p v-if="isInitial">
+          Drag your file(s) here to begin
+          <br />or click to browse
+        </p>
+        <p v-if="isSaving">Uploading file...</p>
+      </div>
+      <!-- File upload -->
+
       <a href class="btn-secondary">Submit</a>
     </div>
   </div>
 </template>
 
 <script>
+const STATUS_INITIAL = 0,
+  STATUS_SAVING = 1,
+  STATUS_SUCCESS = 2,
+  STATUS_FAILED = 3;
+
+import { upload } from "../services/fileUpload.service";
+
 export default {
   name: "Create",
   data() {
@@ -57,8 +85,54 @@ export default {
       rating: 1,
       author: "",
       cost: 0,
-      time: 0
+      time: 0,
+      uploadedFile: [],
+      uploadError: null,
+      currentStatus: null,
+      uploadFieldName: "photos"
     };
+  },
+  computed: {
+    isInitial() {
+      return this.currentStatus === STATUS_INITIAL;
+    },
+    isSaving() {
+      return this.currentStatus === STATUS_SAVING;
+    },
+    isSuccess() {
+      return this.currentStatus === STATUS_SUCCESS;
+    },
+    isFailed() {
+      return this.currentStatus === STATUS_FAILED;
+    }
+  },
+  methods: {
+    reset() {
+      // reset form to initial state
+      this.currentStatus = STATUS_INITIAL;
+      this.uploadedFiles = [];
+      this.uploadError = null;
+    },
+    save(formData) {
+      // upload data to the server
+      this.currentStatus = STATUS_SAVING;
+
+      upload(formData)
+        .then(x => {
+          this.uploadedFiles = [].concat(x);
+          this.currentStatus = STATUS_SUCCESS;
+        })
+        .catch(err => {
+          this.uploadError = err.response;
+          this.currentStatus = STATUS_FAILED;
+        });
+    },
+    filesChange(fieldName, fileList) {
+      this.uploadedFile = fileList;
+    }
+  },
+  mounted() {
+    this.reset();
   }
 };
 </script>
@@ -158,5 +232,35 @@ export default {
 
     border-radius: 0px 4px 4px 0px !important;
   }
+}
+
+.dropbox {
+  outline: 2px dashed grey; /* the dash box */
+  outline-offset: -10px;
+  background: #d8d7d8;
+  color: dimgray;
+  padding: 10px 10px;
+  min-height: 200px; /* minimum height */
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.input-file {
+  opacity: 0; /* invisible but it's there! */
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.dropbox:hover {
+  background: #e2e2e2; /* when mouse over to the drop zone, change color */
+}
+
+.dropbox p {
+  font-size: 1.2em;
+  text-align: center;
+  padding: 50px 0;
 }
 </style>
