@@ -11,14 +11,20 @@ import LandingRecipies from "../mock/LandingRecipies.json";
 // import RecipieCard from "@components/PageLandingComponents/ReceipieCard";
 import RecipieCard from "../components/PageLandingComponents/RecipieCard";
 
+import { fetchAll } from "../services/fileUpload.service";
+
 export default {
   name: "PageLanding",
   components: {
     RecipieCard
   },
+  async mounted() {
+    this.LandingRecipies = await fetchAll();
+  },
+
   data() {
     return {
-      LandingRecipies: LandingRecipies
+      LandingRecipies: null
     };
   }
 };

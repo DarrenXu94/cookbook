@@ -1,6 +1,6 @@
 <template>
-  <router-link :to="'/recipie/'+recipie.id">
-    <article class="card card--1">
+  <router-link :to="'/recipie/'+recipie._id">
+    <article class="card">
       <div class="card__info-hover">
         <div class="card__clock-info">
           <svg class="card__clock" viewBox="0 0 24 24">
@@ -11,13 +11,15 @@
           <span class="card__time">{{recipie.cookingTime}} min</span>
         </div>
       </div>
-      <div class="card__img"></div>
+      <!-- <div id="card__img"></div> -->
+      <div id="card__img" class="card__img"></div>
+      <!-- <img :src="recipie.image" alt /> -->
       <a href="#" class="card_link">
-        <div class="card__img--hover"></div>
+        <div id="card__img--hover" class="card__img--hover"></div>
       </a>
       <div class="card__info">
         <span class="card__category">Recipe</span>
-        <h3 class="card__title">{{recipie.name}}</h3>
+        <h3 class="card__title">{{recipie.title}}</h3>
         <span class="card__by">
           by
           <a href="#" class="card__author" title="author">{{recipie.author}}</a>
@@ -25,7 +27,7 @@
         <div class="card__details layout">
           <div class="card__details__item card__details__time layout-item-33">
             <div class="card__details__item__heading">Time</div>
-            <div class="card__details__item__value">{{recipie.cookingTime}} min</div>
+            <div class="card__details__item__value">{{recipie.time}} min</div>
           </div>
           <div class="card__details__item card__details__rating layout-item-33">
             <div class="card__details__item__heading">Rating</div>
@@ -58,6 +60,13 @@ export default {
   name: "RecipieCard",
   props: {
     recipie: Object
+  },
+  mounted() {
+    // const imgDiv = document.getElementById("card__img");
+    const imgHoverDiv = document.getElementById("card__img--hover");
+    const img = "url(" + this.recipie.image + ")";
+    // imgDiv.style.backgroundImage = img;
+    imgHoverDiv.style.backgroundImage = img;
   }
 };
 </script>
@@ -76,11 +85,6 @@ export default {
   justify-content: center;
   -webkit-justify-content: center;
   max-width: 820px;
-}
-
-.card--1 .card__img,
-.card--1 .card__img--hover {
-  background-image: url("https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
 }
 
 .card__clock {

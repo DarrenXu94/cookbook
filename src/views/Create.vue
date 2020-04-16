@@ -49,21 +49,22 @@
           id="image"
           type="file"
           :name="uploadFieldName"
-          :disabled="isSaving"
           @change="filesChange($event.target.name, $event.target.files)"
           accept="image/*"
           class="input-file"
         />
-        <p v-if="isInitial">
+        <p>
           Drag your file(s) here to begin
           <br />or click to browse
         </p>
-        <p v-if="isSaving">Uploading file...</p>
       </div>
       <!-- File upload -->
 
-      <a href class="btn-secondary">Submit</a>
+      <div href v-on:click="save" class="btn-secondary">Submit</div>
     </div>
+
+    <button v-on:click="testGetImages">Test get images</button>
+    <img id="addMe" />
   </div>
 </template>
 
@@ -73,7 +74,7 @@ const STATUS_INITIAL = 0,
   STATUS_SUCCESS = 2,
   STATUS_FAILED = 3;
 
-import { upload } from "../services/fileUpload.service";
+import { upload, fetchAll } from "../services/fileUpload.service";
 
 export default {
   name: "Create",
@@ -107,27 +108,72 @@ export default {
     }
   },
   methods: {
+    async testGetImages() {
+      const res = await fetchAll();
+      const img = res[0].image.toString("base64");
+      console.log(img);
+      document.getElementById("addMe").src = img;
+    },
     reset() {
       // reset form to initial state
       this.currentStatus = STATUS_INITIAL;
       this.uploadedFiles = [];
       this.uploadError = null;
     },
-    save(formData) {
+    toBase64(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = error => reject(error);
+      });
+    },
+    async save() {
       // upload data to the server
       this.currentStatus = STATUS_SAVING;
 
+      // console.log("clicked save");
+
+      // const file = new Blob([this.uploadedFile[0]], {
+      //   type: "image/*"
+      // });
+      // console.log(file);
+
+      const file = this.uploadedFile[0];
+      const b64 = await this.toBase64(file);
+
+      const formData = new FormData();
+      formData.append("image", b64);
+      formData.append("title", this.title);
+      formData.append("ingredients", this.ingredients);
+      formData.append("directions", this.directions);
+      formData.append("author", this.author);
+      formData.append("rating", this.rating);
+      formData.append("cost", this.cost);
+      formData.append("time", this.time);
+
       upload(formData)
         .then(x => {
-          this.uploadedFiles = [].concat(x);
           this.currentStatus = STATUS_SUCCESS;
+          console.log(x);
         })
         .catch(err => {
-          this.uploadError = err.response;
           this.currentStatus = STATUS_FAILED;
+          console.log(err);
         });
+
+      // upload(formData)
+      //   .then(x => {
+      //     this.uploadedFiles = [].concat(x);
+      //     this.currentStatus = STATUS_SUCCESS;
+      //   })
+      //   .catch(err => {
+      //     this.uploadError = err.response;
+      //     this.currentStatus = STATUS_FAILED;
+      //   });
     },
     filesChange(fieldName, fileList) {
+      console.log(fileList);
       this.uploadedFile = fileList;
     }
   },

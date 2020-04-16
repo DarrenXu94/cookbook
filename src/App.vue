@@ -84,6 +84,7 @@ a {
   text-align: center;
   transition: all 0.2s;
   font-size: 1rem;
+  cursor: pointer;
 }
 .btn-secondary:hover {
   color: #fff;
