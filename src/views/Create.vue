@@ -44,7 +44,7 @@
 
       <!-- File upload -->
       <label for="image">Upload image</label>
-      <div class="dropbox">
+      <div class="dropbox" v-if="currentStatus == 0">
         <input
           id="image"
           type="file"
@@ -58,13 +58,13 @@
           <br />or click to browse
         </p>
       </div>
+      <img class="addedImage" id="addMe" />
       <!-- File upload -->
 
       <div href v-on:click="save" class="btn-secondary">Submit</div>
     </div>
 
-    <button v-on:click="testGetImages">Test get images</button>
-    <img id="addMe" />
+    <!-- <button v-on:click="testGetImages">Test get images</button> -->
   </div>
 </template>
 
@@ -172,8 +172,14 @@ export default {
       //     this.currentStatus = STATUS_FAILED;
       //   });
     },
-    filesChange(fieldName, fileList) {
-      console.log(fileList);
+    async filesChange(fieldName, fileList) {
+      // Add image
+      const file = fileList[0];
+      const b64 = await this.toBase64(file);
+      document.getElementById("addMe").src = b64;
+      //
+
+      this.currentStatus = STATUS_SUCCESS;
       this.uploadedFile = fileList;
     }
   },
@@ -308,5 +314,9 @@ export default {
   font-size: 1.2em;
   text-align: center;
   padding: 50px 0;
+}
+
+.addedImage {
+  max-width: 100%;
 }
 </style>
