@@ -57,7 +57,7 @@
 </template>
 
 <script>
-import { fetchById } from "../services/fileUpload.service";
+import { fetchById } from "../services/api.service";
 
 export default {
   name: "Recipie",

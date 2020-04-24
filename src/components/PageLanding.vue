@@ -16,7 +16,7 @@ import LandingRecipies from "../mock/LandingRecipies.json";
 // import RecipieCard from "@components/PageLandingComponents/ReceipieCard";
 import RecipieCard from "../components/PageLandingComponents/RecipieCard";
 
-import { fetchAll } from "../services/fileUpload.service";
+import { fetchAll } from "../services/api.service";
 
 export default {
   name: "PageLanding",

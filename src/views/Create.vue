@@ -74,7 +74,7 @@ const STATUS_INITIAL = 0,
   STATUS_SUCCESS = 2,
   STATUS_FAILED = 3;
 
-import { upload, fetchAll } from "../services/fileUpload.service";
+import { upload, fetchAll } from "../services/api.service";
 
 export default {
   name: "Create",
@@ -132,13 +132,6 @@ export default {
       // upload data to the server
       this.currentStatus = STATUS_SAVING;
 
-      // console.log("clicked save");
-
-      // const file = new Blob([this.uploadedFile[0]], {
-      //   type: "image/*"
-      // });
-      // console.log(file);
-
       const file = this.uploadedFile[0];
       const b64 = await this.toBase64(file);
 
@@ -156,10 +149,12 @@ export default {
         .then(x => {
           this.currentStatus = STATUS_SUCCESS;
           console.log(x);
+          this.$router.push("/");
         })
         .catch(err => {
           this.currentStatus = STATUS_FAILED;
           console.log(err);
+          alert("Error, check the console");
         });
 
       // upload(formData)
