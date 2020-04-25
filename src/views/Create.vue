@@ -58,13 +58,13 @@
           <br />or click to browse
         </p>
       </div>
-      <img class="addedImage" id="addMe" />
+      <div class="create__image">
+        <img class="addedImage" id="addMe" />
+      </div>
       <!-- File upload -->
 
       <div href v-on:click="save" class="btn-secondary">Submit</div>
     </div>
-
-    <!-- <button v-on:click="testGetImages">Test get images</button> -->
   </div>
 </template>
 
@@ -156,16 +156,6 @@ export default {
           console.log(err);
           alert("Error, check the console");
         });
-
-      // upload(formData)
-      //   .then(x => {
-      //     this.uploadedFiles = [].concat(x);
-      //     this.currentStatus = STATUS_SUCCESS;
-      //   })
-      //   .catch(err => {
-      //     this.uploadError = err.response;
-      //     this.currentStatus = STATUS_FAILED;
-      //   });
     },
     async filesChange(fieldName, fileList) {
       // Add image
@@ -290,7 +280,6 @@ export default {
   min-height: 200px; /* minimum height */
   position: relative;
   cursor: pointer;
-  margin-bottom: 1rem;
 }
 
 .input-file {
@@ -313,5 +302,9 @@ export default {
 
 .addedImage {
   max-width: 100%;
+}
+
+.create__image {
+  margin-bottom: 1rem;
 }
 </style>
