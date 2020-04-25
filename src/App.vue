@@ -1,14 +1,9 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>-->
     <div class="nav">
       <div class="nav__title">
         <router-link to="/">The Cookbook</router-link>
         <router-link class="btn-primary" to="/create">New Recipie</router-link>
-        <!-- <a href class="btn-primary">New Recipie</a> -->
       </div>
     </div>
     <router-view />
@@ -89,6 +84,25 @@ a {
 .btn-secondary:hover {
   color: #fff;
   background-color: $navbar_background;
+}
+
+.btn-danger {
+  background-color: #d9534f;
+  display: inline-block;
+  padding: 0.15em 0.8em;
+  border: 0.1em solid #d43f3a;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.2s;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.btn-danger:hover {
+  border: 0.1em solid #ac2925;
+  background-color: #c9302c;
 }
 
 // Global classes
