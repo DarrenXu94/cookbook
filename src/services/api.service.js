@@ -1,6 +1,6 @@
 import * as axios from 'axios';
 
-const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'https://cookbook-node.herokuapp.com';
 
 function fetchAll() {
     const url = `${BASE_URL}/api/recipies`;
