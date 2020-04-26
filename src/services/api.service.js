@@ -6,6 +6,7 @@ const BASE_URL = (env === 'dev') ? 'https://cookbook-node.herokuapp.com' : 'http
 
 function fetchAll() {
     const url = `${BASE_URL}/api/recipies`;
+    alert(`Fetch all ${url}`)
     return axios.get(url).then(x => x.data)
 }
 
