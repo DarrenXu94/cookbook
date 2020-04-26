@@ -154,7 +154,7 @@ export default {
         .catch(err => {
           this.currentStatus = STATUS_FAILED;
           console.log(err);
-          alert("Error, check the console");
+          alert(err);
         });
     },
     async filesChange(fieldName, fileList) {
