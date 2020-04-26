@@ -2,11 +2,12 @@ import * as axios from 'axios';
 
 const env = process.env.NODE_ENV;
 
-const BASE_URL = (env === 'dev') ? 'https://cookbook-node.herokuapp.com' : 'http://localhost:5000';
+// const BASE_URL = (env === 'dev') ? 'https://cookbook-node.herokuapp.com' : 'http://localhost:5000';
+const BASE_URL = 'https://cookbook-node.herokuapp.com';
 
 function fetchAll() {
     const url = `${BASE_URL}/api/recipies`;
-    alert(`Fetch all ${url}`)
+    // alert(`Fetch all ${url}`)
     return axios.get(url).then(x => x.data)
 }
 
