@@ -3,7 +3,7 @@
     <div class="nav">
       <div class="nav__title">
         <router-link to="/">The Cookbook</router-link>
-        <router-link class="btn-primary" to="/create">New Recipie</router-link>
+        <router-link class="btn-primary" to="/create">New Recipe</router-link>
       </div>
     </div>
     <router-view />

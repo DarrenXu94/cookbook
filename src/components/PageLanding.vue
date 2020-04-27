@@ -1,7 +1,7 @@
 <template>
   <div class="page_landing">
     <div class="layout page_landing_delete">
-      <button v-on:click="toggleDeleteState" class="btn-danger">Delete a receipie</button>
+      <button v-on:click="toggleDeleteState" class="btn-danger">Delete a recipe</button>
     </div>
     <div class="card_container layout">
       <RecipieCard
