@@ -2,7 +2,9 @@ import * as axios from 'axios';
 
 const env = process.env.NODE_ENV;
 
-const BASE_URL = (env !== 'dev') ? 'https://cookbook-node.herokuapp.com' : 'http://localhost:5000';
+console.log(env, "ENV")
+
+const BASE_URL = (env !== 'development') ? 'https://cookbook-node.herokuapp.com' : 'http://localhost:5000';
 // const BASE_URL = 'https://cookbook-node.herokuapp.com';
 
 function fetchAll() {
